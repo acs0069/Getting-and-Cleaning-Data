@@ -15,3 +15,13 @@ and several steps are taken to make sure that certain column names are set so
 the merge can be successful. Using the select() function, it cleans up the data
 such that the columns called "subject", "ident", and anything the contains eiter
 "mean" or "std" are kept according to the instructions.
+
+There are then several replacements for the names of the variables in the new
+dataset, which is accomplished using names() and gsub(). After, the data is 
+melted into a new format that uses melt() twice, and then uses dcast() to 
+try and cast the data to calculate the mean first by subject, then by each
+activity and merges them into a new table.
+
+Finally, extraneous variables are removed from the environment using remove()
+and then it writes the .txt file into the current directory. Finaly, the table
+is visualized in RStudio or R using View()
