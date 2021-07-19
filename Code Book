@@ -1,0 +1,27 @@
+# Code Book for run_analysis.R
+
+#################################################################################
+
+- feat.var       = features.txt loaded into R
+- activ.lab      = activity_labels.txt loaded into R
+- x.test         = in the test directory, the file X_test.txt loaded into R
+- y.test         = in the test directory, the file y_test.txt loaded into R
+- subj.test      = in the test directory, the file subject_test.txt loaded into R
+- x.train        = in the train directory, the file X_test.txt loaded into R
+- y.train        = in the train directory, the file y_test.txt loaded into R
+- subj.train     = in the train directory, the file subject_test.txt loaded into R
+- x.data         = row bounded data of x.train and x.test
+- y.data         = row bounded data of y.train and y.test
+- subj.merged    = row bounded data of subj.train and subj.test
+- merged.data    = column bounded subj.merged, y.data, and x.data
+- tidy.data      = a trimmed version of merged.data that only has variables with the
+   words "mean" or "std" in their titles
+- tidy.names     = a vector of the variable names of tidy.data
+- melt.tidy.data = using the keys of "subject" and "activity", a new melted table 
+   created and sorted by these two ids including all of the variables
+- summary.data.subject = data that was recast such that all of the subjects seen
+   in the data set were separated and had the means calculated for each variable
+- summary.data.activity = data that was recast such that all of the activities seen
+   in the data set were separated and had the means calculated for each variable
+- merged.results = row bounded data of summary.data.subject and 
+   summary.data.activity
